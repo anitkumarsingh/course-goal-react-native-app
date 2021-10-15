@@ -1,22 +1,19 @@
-import { useState } from 'react';
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 
 const App = () => {
-	const [outputText, setOutputText] = useState('This is react native app!');
 	return (
-		<View style={styles.container}>
-			<Text>{outputText}</Text>
-			<StatusBar style='auto' />
-			<Button
-				title='Change Text'
-				onPress={() => setOutputText('Text has been changed!')}
-			/>
+		<View style={{padding:50}}>
+			<View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
+       <TextInput  placeholder="Enter your course goal" style={{borderBottomColor:'black',borderBottomWidth:1,marginBottom:5,fontSize:20,padding:5}}/>
+			 <Button title="ADD"/>
+			</View>
+			<View>
+         <Text>Coarse goal list display</Text>
+			</View>
 		</View>
 	);
 };
-export default App;
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
@@ -25,3 +22,5 @@ const styles = StyleSheet.create({
 		justifyContent: 'center'
 	}
 });
+
+export default App;
