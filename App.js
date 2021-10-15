@@ -12,7 +12,7 @@ const App = () => {
 			 <Button title="ADD" onPress={()=>setCurrentGoal(current=>[...current,enteredGoal])}/>
 			</View>
 			<View>
-         <Text>Coarse goal list display</Text>
+         {currentGoal.map((goal,index)=><Text key={index}>{goal}</Text>)}
 			</View>
 		</View>
 	);
