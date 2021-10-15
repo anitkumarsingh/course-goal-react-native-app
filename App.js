@@ -12,7 +12,7 @@ const App = () => {
 			 <Button title="ADD" onPress={()=>setCurrentGoal(current=>[...current,enteredGoal])}/>
 			</View>
 			<View>
-         {currentGoal.map((goal,index)=><Text key={index}>{goal}</Text>)}
+         {currentGoal.map((goal,index)=><View key={index} style={styles.listItem}><Text >{goal}</Text></View>)}
 			</View>
 		</View>
 	);
@@ -33,6 +33,13 @@ const styles = StyleSheet.create({
 		marginBottom:5,
 		fontSize:20,
 		padding:5
+	},
+	listItem:{
+		padding:3,
+    marginVertical:5,
+		borderRadius:5,
+		backgroundColor:'#f3f3f3',
+		color:'white'
 	}
 });
 
